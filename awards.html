@@ -1,0 +1,188 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>新翊菖營造股份有限公司</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <header class="navbar" id="navbar">
+    <nav>
+      <div class="logo">
+        <img src="螢幕擷取畫面_2025-08-21_115626-removebg-preview.png" alt="公司標誌" class="logo-img">
+      </div>
+      <a href="index.html" >首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="records.html">工程實績</a>
+      <a href="awards.html"class="active">獲獎紀錄</a>
+      <a href="employment.html">團隊/招募</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+
+<section class="award-section">
+    <section class="award-hero">
+      <div class="overlay"></div>
+      <div class="award-content">
+        <h2>獲獎紀錄</h2>
+        <p>
+          公司始終秉持專業與品質至上，多年來榮獲多項專業獎項與認證。<br>
+在工程品質與職安管理方面的表現，屢屢獲得主管機關與業界一致肯定。<br>
+這些榮耀不僅彰顯我們的堅實實力，更奠定了持續領先與創新的地位。<br>
+        </p>
+      </div>
+    </section>
+  </section>
+
+  
+            <!-- Stats Section
+    <link rel="stylesheet" href="tester/style.css">
+  <section id="section3" class="stats">
+    <div class="stat">
+      <h2>4,732+</h2>
+      <p>接管戶數</p>
+    </div>
+    <div class="stat">
+      <h2>3,284 m</h2>
+      <p>分支管長度</p>
+    </div>
+    <div class="stat">
+      <h2>2.7 億</h2>
+      <p>工程經費</p>
+    </div>
+    <div class="stat">
+      <h2>405 天</h2>
+      <p>工期</p>
+    </div>
+  </section> -->
+
+
+
+  <div class="small-section" id="certificates1">
+    <h2>歷年查核紀錄及獎懲情形</h2>
+    <img src="awards/award 1.png" alt="award1" class="award-img">
+  </div>
+  <div class="small-section" id="certificates2">
+    <h2>相關職安事蹟</h2>
+    <img src="awards/award 2.png" alt="award2" class="award-img">
+        <img src="awards/award 2.1.png" alt="award2" class="award-img">
+        <img src="awards/award2.2.png" alt="award2" class="award-img">
+
+  </div>
+  <div class="small-section" id="certificates3">
+    <h2>優良事蹟</h2>
+<img src="awards/award3.png" alt="award3" class="award-img" >
+<img src="awards/award3.1.png" alt="award3" class="award-img" > 
+ </div>
+
+<section class="award-section3">
+  <div class="award-container">
+    <h3>新翊菖營造前進花蓮 | 投入堰塞湖災後搶修行動</h3>
+    <p>
+      花蓮地區因地震引發堰塞湖災情，新翊菖營造股份有限公司動員挖土機及多項重型機具前往災區，
+      協助進行道路搶修與災後整復工作。<br>
+      此次投入行動的貢獻也獲得台中市政府肯定，新翊菖營造榮獲市府頒發感謝狀，
+      以表彰在災後賑災行動中的積極付出與專業協助。
+    </p>
+
+    <div class="award-gallery">
+      <div class="award-column fade-in">
+        <img src="certificates/花蓮.jpg" alt="花蓮協助感謝狀" class="award-img2" style="width: 330px">
+        <p class="award-label">花蓮賑災協助感謝狀</p>
+      </div>
+
+      <div class="award-column fade-in">
+        <div class="slider-container">
+          <div class="slider" id="hualien-slider">
+            <img src="awards/花蓮/1761641391436_0.jpg" alt="花蓮現場照片" class="award-img2">
+            <img src="awards/花蓮/1761641405334_0.jpg" alt="花蓮現場照片" class="award-img2">
+            <img src="awards/花蓮/1761641434934_0.jpg" alt="花蓮現場照片" class="award-img2">
+            <img src="awards/花蓮/1761641454820_0.jpg" alt="花蓮現場照片" class="award-img2">
+          </div>
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <p class="award-label">花蓮現場施工照片</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let slideIndex = 0;
+const slider = document.getElementById("hualien-slider");
+const slides = slider.querySelectorAll("img");
+
+function moveSlide(direction) {
+  const totalSlides = slides.length;
+  slideIndex = (slideIndex + direction + totalSlides) % totalSlides;
+  // Instantly jump without any transition
+  slider.style.transition = "none";
+  slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+</script>
+
+
+
+</section>
+
+<script>
+  (function () {
+    const slider = document.querySelector('.community-slider');
+    if (!slider) return;
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+    const playBtn = slider.querySelector('.play');
+    let index = 0;
+    let playing = true;
+    let timer = null;
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    }
+
+    function next() { index = (index + 1) % slides.length; update(); }
+    function prev() { index = (index - 1 + slides.length) % slides.length; update(); }
+
+    function start() { playing = true; playBtn.textContent = '▌▌'; timer = setInterval(next, 3000); }
+    function stop() { playing = false; playBtn.textContent = '▶'; clearInterval(timer); }
+
+    prevBtn.addEventListener('click', () => { prev(); if (playing) { stop(); } });
+    nextBtn.addEventListener('click', () => { next(); if (playing) { stop(); } });
+    playBtn.addEventListener('click', () => { playing ? stop() : start(); });
+
+    slider.addEventListener('mouseenter', () => { if (playing) stop(); });
+    slider.addEventListener('mouseleave', () => { if (!playing) start(); });
+
+    update();
+    start();
+  })();
+</script>
+
+
+
+</section>
+
+
+<div id="footer-placeholder"><script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+

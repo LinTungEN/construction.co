@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>新翊菖營造股份有限公司</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <header class="navbar" id="navbar">
+    <nav>
+      <div class="logo">
+        <img src="螢幕擷取畫面_2025-08-21_115626-removebg-preview.png" alt="公司標誌" class="logo-img">
+      </div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="records.html">工程實績</a>
+      <a href="awards.html">獲獎紀錄</a>
+      <a href="employment.html">團隊/招募</a>
+      <a href="contact.html" class="active">聯絡我們</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact" id="contact">
+      <h1>聯絡我們</h1>
+      <form id="contactForm" action="https://formspree.io/f/xzzawbkb" method="POST" class="contact-form"
+        onsubmit="alert('感謝您的留言，我們會盡快回覆！')">
+        <label>姓名
+          <input type="text" name="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+        <label>訊息
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">送出訊息</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"><script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</div>
+</body>
+</html>

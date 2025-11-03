@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>新翊菖營造股份有限公司</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <header class="navbar" id="navbar">
+    <nav>
+      <div class="logo">
+        <img src="螢幕擷取畫面_2025-08-21_115626-removebg-preview.png" alt="公司標誌" class="logo-img">
+      </div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="records.html" class="active">工程實績</a>
+      <a href="awards.html">獲獎紀錄</a>
+      <a href="employment.html">團隊/招募</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+
+
+  <section class="records-page">
+    <section class="projects-hero">
+      <div class="overlay"></div>
+      <div class="projects-content">
+        <h2>工程實績</h2>
+        <p>
+          我們參與多項重要工程，包括<strong>台電案件</strong>與<strong>污水案件</strong><br>
+          以專業技術與嚴謹態度，展現公司卓越的施工能力與責任感。
+        </p>
+      </div>
+    </section>
+  </section>
+  <section class="services-section" id="projects">
+    <div class="container">
+      <div class="section-header" >
+        <h2>服務項目</h2>
+        <p>我們提供專業的工程與服務內容，您可以點擊下方選項了解更多資訊。</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 台電案件 -->
+        <div class="service-box">
+          <div class="service-img" style="background-image: url('人孔組立完成.jpg');">
+            <div class="overlay"></div>
+            <div class="service-content">
+              <a href="#taipower-projects" class="service-btn"><strong>台電案件</strong></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 污水案件 -->
+        <div class="service-box">
+          <div class="service-img" style="background-image: url('鋼襯鈑.jpg');">
+            <div class="overlay"></div>
+            <div class="service-content">
+              <a href="#sewage-projects" class="service-btn"><strong>污水案件</strong></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        
+      </div>
+    </div>
+  </section>
+
+
+  <section id="taipower-projects" class="big-section">
+    <h2>台電案件</h2>
+    <p>我們承攬多項台電電纜管路工程，涵蓋苗栗、台中、彰化、南投、雲林等地區，施工項目包含電纜統包工程、管路預埋、試挖及鑽探等專案。透過推進工法與明挖工法，已累積完成逾 10
+      萬公尺的管線工程，展現出專業施工能力與品質保證，為電力供應系統的穩定與安全提供堅實基礎。</p>
+    <br><br>
+    <img src="台電案件.png" alt="台電案件" class="record1-img">
+  </section>
+
+  <section id="sewage-projects" class="big-section">
+    <h2>污水案件</h2>
+
+    <p>
+      在污水下水道工程方面，我們積極承攬台中市各地標案，涵蓋西屯、北屯、南屯、太平等區域，推動市區污水管線建設與外接工程。透過專業規劃與施工團隊，我們有效提升城市環境品質，並改善公共衛生與生活便利性，為居民打造更安全、潔淨的生活環境。
+    </p>
+        <a href="about.html" class="scroll-btn">認識污水下水道工程</a>
+
+    <img src="汙水工程總績效.png" alt="污水工程總績效" class="record2-img">
+
+    <img src="汙水記錄.png" alt="污水記錄" class="record2.1-img">
+
+  </section>
+
+
+ 
+  </section>
+
+  <secction id="word-section">
+<div class="word-section">
+    <h3>以上示意圖為近幾年實績，點擊下方文檔了解更多案件經歷。</h3>
+    <a href="履約實績 (1).pdf" download>Download PDF Document</a>
+</div>
+  </secction>
+
+  <div id="footer-placeholder"><script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</div>
+
+</body>
+
+</html>

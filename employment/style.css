@@ -1,0 +1,583 @@
+:root {
+  --bg: #000000;
+  --bg-light: #ffffff;
+  --text1: #ffffff;
+  --text2: #000000;
+  --accent: #444;
+  --card: #cecece;
+  --border: #ffffff;
+  --orange: #ed7b2a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text1);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.worker-section {
+  width: 100%;
+  margin: 0;
+  background-color: #000000;
+  padding-top: 200px;
+  height: 148px;
+}
+
+.worker-hero {
+  margin: 0;
+  padding: 0;
+}
+
+.worker-content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  padding: 20px;
+}
+
+.worker-content h2 {
+  font-size: 48px;
+}
+
+.worker-content p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.team-chose {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  background: transparent;
+}
+
+.team-column {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.team-column h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #be5c16;
+}
+
+.team-column p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.team-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--orange);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.team-btn:hover {
+  background: #005f87;
+}
+
+.team {
+  margin: 0;
+  background-color: #ffffff;
+  padding: 40px 24px;
+  color:#000000;
+}
+
+.team h1{
+  font-size: 66px;
+  display: inline-block;
+}
+
+.team p{
+  font-size:22px;
+  display: inline-block;
+  margin-left:20px;
+  background-color: #ed7b2a;
+  padding:5px 10px;
+  border-radius: 16px;
+  color:#fff;
+}
+
+.team-grid {
+  margin: 0;
+  padding: 0;
+}
+
+.team-general{
+  background-color: var(--bg-light);
+  justify-content: center;
+  padding:30px;
+}
+.team-general img{
+  width: 80%;
+  height: auto;
+  position: relative;
+  margin: 30px auto 0;
+  display: block;
+}
+
+
+
+
+.benefits {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+    padding-top:50px;
+
+}
+
+.benefits h2{
+  font-size: 66px;
+}
+
+.benefits-intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.benefits-slider {
+  position: relative;
+  max-width: 2200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.benefit-item.active {
+  display: block;
+  background-color: #fff;
+  padding:50px;
+  border-radius: 16px;
+}
+
+.benefit-item {
+  display: none;
+  text-align: center;
+}
+
+.benefit-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #3d3d3d;
+  margin-bottom: 10px;
+}
+
+
+/* ==========================
+   教育訓練項目 (Dropdown)
+========================== */
+.training-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.training-section h2 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.training-section p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+  font-size: 1em;
+  color: #333333;
+}
+
+.training-section .dropdown-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.training-section details {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.training-section summary {
+  cursor: pointer;
+  padding: 18px 24px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #222;
+  list-style: none;
+  position: relative;
+  background-color: #ffffff;
+  border-left: 8px solid var(--orange, #ff9900);
+  transition: background 0.3s ease;
+}
+
+.training-section summary::marker { content: ""; }
+.training-section summary::after {
+  content: "＋";
+  position: absolute;
+  right: 24px;
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.training-section details[open] summary::after {
+  content: "－";
+  transform: rotate(180deg);
+}
+
+.training-section .training-content {
+  padding: 25px 35px 35px;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.7;
+}
+
+.training-section .training-content p {
+  margin: 0;
+}
+
+.training-section summary:hover {
+  background-color: #ffe9cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .training-section h2 {
+    font-size: 42px;
+  }
+  .training-section summary {
+    font-size: 1.1em;
+    padding: 15px 18px;
+  }
+  .training-section .training-content {
+    padding: 18px;
+  }
+}
+
+
+/* ===== 員工旅遊 Section ===== */
+.benefit-section {
+  padding: 10px;
+  background: #000;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.benefit-header h2 {
+  font-size: 2.5rem;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.benefit-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.travel-grid {
+  padding-top: 30px;
+  margin: 0 auto;    /* center it */
+  width: 100%;       /* make it span page width */
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* space between columns/rows */
+}
+
+.travel-grid2 {
+    padding-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;  /* set a max width for the grid */
+  margin: 0 auto;      /* centers the whole grid */
+}
+
+
+
+
+
+.trip h3 {
+  font-size: 20px;
+  color: var(--card);
+  margin-bottom: 15px;
+}
+
+.benefit-gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.gallery-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.gallery-container img.active {
+  opacity: 1;
+}
+
+.gallery-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.gallery-controls button {
+  background: none;      /* no background */
+  border: none;
+  color: white;          /* white buttons */
+  font-size: 2rem;
+  cursor: pointer;
+  pointer-events: auto;  /* allow clicks */
+  padding: 0 10px;
+}
+
+.gallery-controls button:hover {
+  color: var(--orange);  /* hover effect */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-container {
+    height: 180px;
+  }
+  .travel-grid {
+    gap: 20px;
+  }
+}
+
+.benefit-subpage {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.benefit-subpage h1 {
+  font-size: 3rem;
+  color: #ed7b2a;
+  margin-bottom: 20px;
+}
+
+.benefit-subpage p {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.benefit-section {
+  margin-bottom: 60px;
+}
+
+.benefit-section h2 {
+  font-size: 2rem;
+  color: #ed7b2a;
+  margin-bottom: 10px;
+}
+
+.benefit-section p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.travel-grid,
+.meal-gallery,
+.team-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.travel-grid img,
+.meal-gallery img,
+.team-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.travel-grid img:hover,
+.meal-gallery img:hover,
+.team-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.back-link {
+  margin-top: 40px;
+}
+
+.back-link .team-btn {
+  background-color: #ed7b2a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.back-link .team-btn:hover {
+  background-color: #c45f18;
+}
+
+.benefits-section {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.benefits-directory {
+  text-align: center;
+  padding: 20px;
+  background:transparent;
+  color: #fff;
+  width: 100%;
+}
+
+
+.directory-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top:60px;
+}
+
+.directory-item {
+  display: block;
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.directory-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #00b4d8;
+}
+
+.directory-item p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.directory-item:hover {
+  background: #333;
+  transform: translateY(-5px);
+}
+
+
+
+.benefits-dropdowns {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background:transparent;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+.benefit-dropdown {
+  display: none;
+  padding: 40px 10vw;
+  width: 100%;
+  box-sizing: border-box;
+  animation: dropdownFade 0.3s;
+}
+
+.benefit-dropdown.active {
+  display: block;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.find{
+  padding:50px;
+  margin-bottom: 0px;
+  text-align: center;
+  background:#aaa;
+  color: #000;
+  font-size: 18px;
+
+}
+
+.find a{
+  color: #d55900;
+  text-decoration: none;
+}
+
+.find a:hover{
+  text-decoration: underline;
+}
+
+.find span{
+  color: #ccc;
+}
