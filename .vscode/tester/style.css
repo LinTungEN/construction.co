@@ -1226,7 +1226,7 @@ color:#e43333;
 }
 
 .tp-card h3 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 8px;
   color: var(--text2);
 }
@@ -1241,29 +1241,116 @@ color:#e43333;
 /* Construction Methods (Bright Section) */
 .construction-methods {
   background: var(--bg-light);
-  padding: 20px;
+  padding: 5px;
   border-radius: 10px;
-  border: 1px solid var(--border);
+  margin-bottom: 20px;
+
 }
 
 .method-section {
   margin-bottom: 30px;
+  text-align: center; /* 讓 inline-block 子元素置中 */
+  padding-top:70px;
 }
 
 .method-section h3 {
-  color: var(--orange);
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-  font-size: 18px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  display: inline-block; /* 保持黑色框只包住文字 */
 }
+
+.method-section p {
+  background: #000;
+  color: #e6e6e6;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: block; /* 段落保持全寬 */
+}
+
+
 
 .method-img {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   display: block;
   margin: 0 auto;
 }
+.photo-row {
+  display: flex;              /* places columns side by side */
+  justify-content: center;    /* centers them horizontally */
+  gap: 50px;                  /* space between pictures */
+  margin: 20px 0;
+}
+
+.photo-column img {
+  width: 100%;
+  max-width: 500px;           /* limit size */
+}
+@media (max-width: 768px) {
+  .photo-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+/*.construction-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  min-width: 220px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s ease;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step img {
+  width: 100%;
+  height: 140px; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  flex-shrink: 0; 
+}
+
+.step h3 {
+  margin-bottom: 6px;
+  color: #ed7b2a;
+}
+
+.step p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}*/
 
 /* Performance Table (Dark Section) */
 .performance-table {
@@ -1518,3 +1605,77 @@ color:#e43333;
   margin: 0 auto;     /* center horizontally */
   border-radius: 8px; /* optional: match your card style */
 }
+
+
+/* Accordion Hidden by Default */
+.method-content {
+  display: none;
+  background: var(--bg-light);
+  color: var(--text2);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+}
+
+.method-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add subtle text & structure inside white box */
+.construction-methods p {
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+}
+
+/* Make tp-cards look clickable */
+.tp-card {
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+.tp-card:hover::after {
+  transform: translateY(2px);
+}
+
+/* Horizontal Navigation Buttons (目錄) */
+    .tp-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .tp-nav-btn {
+      flex: 1; /* equal width */
+      text-align: center;
+      background: var(--card);
+      color: rgb(27, 27, 27);
+      padding: 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .tp-nav-btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-3px);
+    }
