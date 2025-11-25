@@ -1515,6 +1515,115 @@ letter-spacing: 1px;
   .community-meeting .columns { flex-direction: column; }
 }
 
+/* ---------------------- */
+/* 📱 手機版 (小於 768px) */
+/* ---------------------- */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 12px 10px;
+    height: auto;
+  }
+  .navbar nav a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .logo-img {
+    width: 32px;
+    margin-left: 10px;
+  }
+
+  /* Hero 區塊 */
+  .hero {
+    height: 65vh;
+  }
+  .hero-text h1 {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+  .hero-text h2 {
+    font-size: 14px;
+  }
+  .hero-text h3 {
+    font-size: 16px;
+  }
+  .hero-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* 關於我們 Hero */
+  .about-content h2 {
+    font-size: 28px;
+  }
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* CS section 標題 */
+  .cs-header h2 {
+    font-size: 26px;
+    padding: 15px;
+  }
+
+  /* CS 卡片 */
+  .cs-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* 影片 + 文字特色區 */
+  .feature-content {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .feature-video video {
+    width: 100%;
+    padding: 0;
+  }
+  .feature-text h2 {
+    font-size: 26px;
+  }
+
+  /* 服務項目 */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service-btn {
+    font-size: 1.2rem;
+  }
+
+  /* Big section (台電/水利那種) */
+  .big-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .big-section h2 {
+    font-size: 36px;
+    margin-left: 0;
+  }
+  .big-section p {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .big-section img {
+    max-width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  /* Awards sections */
+  .small-section img {
+    max-width: 90%;
+    margin-left: 0;
+    padding: 10px;
+  }
+  .awards-section h1 {
+    font-size: 26px;
+  }
+}
 
 
 

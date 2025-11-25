@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://lintungen.github.io/construction.co/sitemap.xml
+

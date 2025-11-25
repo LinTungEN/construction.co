@@ -1679,3 +1679,125 @@ color:#e43333;
       color: #fff;
       transform: translateY(-3px);
     }
+
+
+    /* ==========================
+   全站手機版優化（推薦）
+========================== */
+@media (max-width: 768px) {
+
+  /* 全站文字縮小一點 */
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 28px !important; }
+  h3 { font-size: 22px !important; }
+  h4 { font-size: 18px !important; }
+  p  { font-size: 16px !important; }
+
+  /* sewage 區塊 */
+  .sewage {
+    height: auto;
+    padding-top: 40px;
+  }
+  .sewage h1 { font-size: 30px; }
+  .sewage p { font-size: 16px; }
+
+  /* 目錄 TOC */
+  .toc-list {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 20px;
+  }
+  .toc-list li {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    padding: 14px;
+  }
+
+  /* aboutpipes 兩欄 → 一欄 */
+  .aboutpipes {
+    grid-template-columns: 1fr;
+    font-size: 28px;
+    padding: 30px 20px;
+  }
+  .aboutpipes p {
+    font-size: 16px;
+  }
+
+  /* before-after */
+  .before-after h2 { font-size: 32px; }
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+  .comparison h3 { font-size: 26px; letter-spacing: 5px; }
+
+  /* policies 區塊 */
+  .tables {
+    grid-template-columns: 1fr;
+  }
+
+  /* 社區說明會 */
+  .community-meeting h2 { font-size: 36px; }
+  .community-meeting p { font-size: 16px; }
+
+  .custom-section .columns {
+    flex-direction: column;
+  }
+
+  .slider-controls {
+    gap: 16px;
+  }
+  .slider-controls button {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* benefits 區塊 */
+  .benefits h2 { font-size: 38px; }
+
+  .switch-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-container {
+    height: 220px;
+  }
+
+  /* Save-costs 區塊 */
+  .reason {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .reason-text h5 { font-size: 24px; }
+  .reason-text p { font-size: 16px; }
+
+  /* added value 區塊 */
+  .value-picture-section {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  /* stats 區塊 */
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+  }
+
+  /* money 區塊 */
+  .money h2 { font-size: 36px; }
+  .money p { font-size: 16px; }
+
+  .layers {
+    grid-template-columns: 1fr;
+  }
+  .layers p {
+    margin-left: 0;
+  }
+
+  .money-img img,
+  .layers img {
+    width: 100%;
+  }
+}
