@@ -38,12 +38,12 @@ html {
 
 
 .navbar {
-background: #ffffff; /* bright background */
+background: #f1f1f1; /* bright background */
 width: 100%;
 position: fixed;
 top: 0;
 left: 0;
-padding: 12px 25px;
+padding: 0px 15px;
 box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 z-index: 100;
 }
@@ -59,7 +59,7 @@ margin: auto;
 
 
 .logo-img {
-height: 55px;
+height: 70px;
 object-fit: contain;
 }
 
