@@ -21,6 +21,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
 .worker-section {
   width: 100%;
   margin: 0;
@@ -47,11 +50,11 @@ html {
 }
 
 .worker-content h2 {
-  font-size: 48px;
+  font-size: 56px;
 }
 
 .worker-content p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 2;
   margin-bottom: 10px;
 }
@@ -109,12 +112,12 @@ html {
 }
 
 .team h1{
-  font-size: 66px;
+  font-size: 46px;
   display: inline-block;
 }
 
 .team p{
-  font-size:22px;
+  font-size:16px;
   display: inline-block;
   margin-left:20px;
   background-color: #ed7b2a;
@@ -134,10 +137,10 @@ html {
   padding:30px;
 }
 .team-general img{
-  width: 80%;
+  width: 60%;
   height: auto;
   position: relative;
-  margin: 30px auto 0;
+  margin: 20px auto;
   display: block;
 }
 
@@ -192,7 +195,7 @@ html {
 
 /* ==========================
    教育訓練項目 (Dropdown)
-========================== */
+========================== 
 .training-section {
   background-color: #ffffff;
   padding: 60px 20px;
@@ -273,7 +276,6 @@ html {
   background-color: #ffe9cc;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .training-section h2 {
     font-size: 42px;
@@ -285,7 +287,7 @@ html {
   .training-section .training-content {
     padding: 18px;
   }
-}
+}*/
 
 
 /* ===== 員工旅遊 Section ===== */
@@ -326,6 +328,21 @@ html {
   gap: 20px;
   max-width: 1200px;  /* set a max width for the grid */
   margin: 0 auto;      /* centers the whole grid */
+}
+
+.directory-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 欄 */
+  gap: 20px; /* 欄與欄之間的間距 */
+  justify-items: center; /* 水平置中每個按鈕 */
+  max-width: 1200px; /* 限制整個 grid 寬度 */
+  margin: 0 auto;     /* 居中整個 grid */
+}
+
+/* 可選：按鈕自適應列寬 */
+.directory-item {
+  width: 100%;        /* 每個按鈕撐滿所在列 */
+  max-width: 250px;   /* 設定最大寬度 */
 }
 
 

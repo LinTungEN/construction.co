@@ -5,26 +5,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>新翊菖營造股份有限公司</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="tester/style.css" />
 
 </head>
 
 <body>
-  <!-- 導覽列 -->
-  <header class="navbar" id="navbar">
-    <nav>
-      <div class="logo">
-        <img src="螢幕擷取畫面_2025-08-21_115626-removebg-preview.png" alt="公司標誌" class="logo-img">
-      </div>
-      <a href="index.html">首頁</a>
-      <a href="about.html">關於我們</a>
-      <a href="records.html" class="active">工程實績</a>
-      <a href="awards.html">獲獎紀錄</a>
-      <a href="employment.html">團隊/招募</a>
-    </nav>
-  </header>
+<!-- Updated Navbar HTML -->
+<header class="navbar" id="navbar">
+<nav class="nav-container">
+<div class="logo">
+<img src="companylogo.png" alt="公司大標誌" class="logo-img">
+</div>
+<div class="nav-links">
+<a href="index.html" >首頁</a>
+<a href="about.html">關於我們</a>
+<a href="records.html"class="active">工程實績</a>
+<a href="awards.html">獲獎紀錄</a>
+<a href="employment.html">團隊/招募</a>
+<a href="benefit.html">員工福利</a>
 
+</div>
+</nav>
+</header>
 
   <section class="records-page">
     <section class="projects-hero">
@@ -148,12 +152,11 @@
 
   <secction id="word-section">
 <div class="word-section">
-    <h3>以上示意圖為近幾年實績，點擊下方文檔了解更多案件經歷。</h3>
-    <a href="履約實績 (1).pdf" download>Download PDF Document</a>
+    <h3>以上示意圖為近5年實績</h3>
+    <!--<a href="履約實績 (1).pdf" download>Download PDF Document</a>-->
 </div>
   </secction>
-
-  <div id="footer-placeholder"><script>
+<div id="footer-placeholder"><script>
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
@@ -161,6 +164,8 @@
     });
 </script>
 </div>
+
+
 
 </body>
 

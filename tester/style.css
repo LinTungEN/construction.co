@@ -22,16 +22,17 @@ html {
 }
 
 
+
+
 /* ==========================
    sewage 區塊
 ========================== */
 .sewage {
-  position: relative;
-  height: 25vh;
-  padding-top:90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex;              /* 啟用 Flexbox */
+  flex-direction: column;     /* 如果有多個元素要堆疊 */
+  justify-content: center;    /* 垂直置中 */
+  align-items: center;        /* 水平置中 */
+  height: 100vh;
   text-align: center;
   color: var(--orange);
 }
@@ -42,7 +43,9 @@ html {
 }
 
 .sewage h1 {
-  font-size: 48px;
+  font-size: 48px;  
+  margin-top:90px;
+
 }
 
 .sewage p {
@@ -1135,16 +1138,17 @@ color:#e43333;
 .tp-section { 
   background: var(--bg);
   color: var(--text1);
-  padding: 48px 0;
-  padding-top:100px;
+  padding: 100px 0 48px; /* top: 100px, bottom: 48px */
   font-family: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Container */
 .tp-section .container {
-  width: 92%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+    margin:120px auto;
+
 }
 
 /* Header */
@@ -1183,11 +1187,14 @@ color:#e43333;
 /* Cards Grid */
 .tp-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 18px;
+  justify-items: stretch; /* ensures all cards are same width */
+  align-items: start;     /* top-align cards in a row */
   margin-bottom: 40px;
 }
 
+/* Card Styles */
 .tp-card {
   background: var(--card);
   border-radius: 8px;
@@ -1195,7 +1202,11 @@ color:#e43333;
   box-shadow: 0 6px 18px rgba(12, 34, 60, 0.06);
   border: 1px solid var(--border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 3px solid var(--orange);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; /* ensures all cards stretch equally */
 }
 
 .tp-card:hover {
@@ -1216,7 +1227,22 @@ color:#e43333;
   line-height: 1.5;
 }
 
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .tp-cards {
+    grid-template-columns: 1fr; /* one card per row on mobile */
+  }
+}
+
+
 /* Construction Methods (Bright Section) */
+.container{
+   width: 60%;
+  max-width: 580px;
+  margin: 0 auto;
+    margin:120px auto;
+}
+
 .construction-methods {
   background: var(--bg-light);
   padding: 5px;
@@ -1237,9 +1263,9 @@ color:#e43333;
   text-align: center;
   font-size: 40px;
   font-weight: 600;
-  padding: 5px;
+  padding: 3px;
   border-radius: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   display: inline-block; /* 保持黑色框只包住文字 */
 }
 
@@ -1247,9 +1273,9 @@ color:#e43333;
   background: #000;
   color: #e6e6e6;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
-  padding: 12px 20px;
+  padding: 10px 16px;
   border-radius: 8px;
   margin-bottom: 30px;
   display: block; /* 段落保持全寬 */
@@ -1357,47 +1383,6 @@ color:#e43333;
   line-height: 1.4;
 }*/
 
-/* Performance Table (Dark Section) */
-.performance-table {
-  margin: 40px 0;
-  overflow-x: auto;
-  background: var(--text2);
-  color: var(--text1);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.performance-table h3 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--orange);
-  font-size: 18px;
-}
-
-.performance-table table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.performance-table th, 
-.performance-table td {
-  padding: 12px 15px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.performance-table th {
-  background-color: var(--orange);
-  color: white;
-  font-weight: 600;
-}
-
-.performance-table tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.05);
-}
 
 /* Gallery (Bright Section) */
 .tp-gallery {
@@ -1698,26 +1683,69 @@ color:#e43333;
   h4 { font-size: 18px !important; }
   p  { font-size: 16px !important; }
 
-  /* sewage 區塊 */
-  .sewage {
-    height: auto;
-    padding-top: 40px;
-  }
-  .sewage h1 { font-size: 30px; }
-  .sewage p { font-size: 16px; }
-
-  /* 目錄 TOC */
-  .toc-list {
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px 20px;
-  }
-  .toc-list li {
-    width: 100%;
+/* Hero Section */
+.sewage {
+    height: 100vh;               /* fill the screen vertically */
+    display: flex;
+    flex-direction: column;      
+    justify-content: center;     /* space content vertically */
+    align-items: center;         /* center horizontally */
     text-align: center;
-    font-size: 1em;
-    padding: 14px;
-  }
+    position: relative;
+    background: #f5f5f5;         
+    gap: 40px;                   /* bigger space between h1 and p */
+    padding: 0 20px;
+    margin: 0;                   /* remove margin-top */
+}
+
+
+.sewage h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.sewage p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Optional overlay */
+.sewage .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.sewage-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TOC */
+.toc-container {
+    margin: 60px auto 120px;
+    text-align: center;
+}
+
+.toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.toc-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+
 
   /* aboutpipes 兩欄 → 一欄 */
   .aboutpipes {

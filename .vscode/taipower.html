@@ -5,26 +5,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>新翊菖營造股份有限公司</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="tester/style.css" />
     <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
-    <!-- 導覽列 -->
-    <section class="navbar" id="navbar">
-        <nav>
+    <!-- Updated Navbar HTML -->
+    <header class="navbar" id="navbar">
+        <nav class="nav-container">
             <div class="logo">
-                <img src="螢幕擷取畫面_2025-08-21_115626-removebg-preview.png" alt="公司標誌" class="logo-img">
+                <img src="companylogo.png" alt="公司大標誌" class="logo-img">
             </div>
-            <a href="index.html">首頁</a>
-            <a href="about.html" class="active">關於我們</a>
-            <a href="records.html">工程實績</a>
-            <a href="awards.html">獲獎紀錄</a>
-            <a href="employment.html">團隊/招募</a>
-        </nav>
-    </section>
+            <div class="nav-links">
+                <a href="index.html">首頁</a>
+                <a href="about.html" class="active">關於我們</a>
+                <a href="records.html">工程實績</a>
+                <a href="awards.html">獲獎紀錄</a>
+                <a href="employment.html">團隊/招募</a>
+                <a href="benefit.html">員工福利</a>
 
+            </div>
+        </nav>
+    </header>
 
     <!-- 台電工程 -->
     <section id="taipower-project" class="tp-section">
@@ -47,112 +52,113 @@
                 <a href="#jacking" class="tp-nav-btn">推進工程</a>
                 <a href="#tunnel" class="tp-nav-btn">隧挖施工</a>
             </div>
+        </div>
+        <!-- Construction Methods -->
+         <div class="container">
+        <div class="method-section" id="precast">
+            <h3>預鑄人孔施工流程</h3>
+            <p>採用預鑄混凝土人孔組塊，快速安裝、結構穩固，提供電纜接續、檢修與維護之安全空間。</p>
 
-            <!-- Construction Methods -->
-            <div class="method-section" id="precast">
-                <h3 >預鑄人孔施工流程</h3>
-                <p >採用預鑄混凝土人孔組塊，快速安裝、結構穩固，提供電纜接續、檢修與維護之安全空間。</p>
+            <div class="construction-methods">
+                <div class="photo-row">
+                    <div class="photo-column left-column">
+                        <img src="taipower/1762748905901.jpg" alt="預鑄人孔施工流程">
 
-                <div class="construction-methods">
-                    <div class="photo-row">
-                        <div class="photo-column left-column">
-                           <img src="taipower/1762748905901.jpg" alt="預鑄人孔施工流程"> 
-
-                        </div>
-                        <div class="photo-column right-column">
-                            <img src="taipower/1762745092372_0.jpg" alt="預鑄人孔施工流程" class="method-img">
-                        </div>
                     </div>
-                </div>
-                <div class="tp-micro">
-                        <h4 style="font-size: 30px;">整體式微創工法預鑄型人孔蓋</h4>
-                        <img src="taipower/1762744100410.jpg" alt="微創工法" class="micro-img">
-                    </div>
-            </div>
-
-          
-
-
-
-            <!-- 明挖管路施工流程 -->
-            <div class="method-section" id="open-cut">
-                <h3 class="section-title">明挖管路施工流程</h3>
-                <p>明挖工法，鋪設 PVC 管並以 CLSM 等材料回填，確保電纜輸送安全與耐久性。</p>
-
-                <div class="construction-methods">
-                    <div class="photo-row">
-                        <div class="photo-column left-column">
-                            <img src="taipower/1762760735922.jpg" alt="明挖管路施工流程" class="method-img">
-                        </div>
-                        <div class="photo-column right-column">
-                            <img src="taipower/1762745200239_0.jpg" alt="明挖管路施工流程" class="method-img">
-                        </div>
+                    <div class="photo-column right-column">
+                        <img src="taipower/1762745092372_0.jpg" alt="預鑄人孔施工流程" class="method-img">
                     </div>
                 </div>
             </div>
+            <div class="tp-micro">
+                <h4 style="font-size: 30px;">整體式微創工法預鑄型人孔蓋</h4>
+                <img src="taipower/1762744100410.jpg" alt="微創工法" class="micro-img">
+            </div>
+        </div>
 
-            <!-- 場鑄涵洞施工流程 -->
-            <div class="method-section" id="culvert">
-                <h3 class="section-title">場鑄涵洞施工流程</h3>
-                <p>現場施作鋼筋混凝土T型涵洞，提供主幹管線的高強度保護通道。</p>
 
-                <div class="construction-methods">
-                    <div class="photo-row">
-                        <div class="photo-column">
-                            <img src="taipower/1762748495512_0.jpg" alt="場鑄涵洞施工流程" class="method-img">
-                        </div>
-                        <div class="photo-column">
-                            <img src="taipower/1762745159668_0.jpg" alt="場鑄涵洞施工流程" class="method-img">
-                        </div>
+
+
+
+        <!-- 明挖管路施工流程 -->
+        <div class="method-section" id="open-cut">
+            <h3 class="section-title">明挖管路施工流程</h3>
+            <p>明挖工法，鋪設 PVC 管並以 CLSM 等材料回填，確保電纜輸送安全與耐久性。</p>
+
+            <div class="construction-methods">
+                <div class="photo-row">
+                    <div class="photo-column left-column">
+                        <img src="taipower/1762760735922.jpg" alt="明挖管路施工流程" class="method-img">
+                    </div>
+                    <div class="photo-column right-column">
+                        <img src="taipower/1762745200239_0.jpg" alt="明挖管路施工流程" class="method-img">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- 潛鑽施工流程 -->
-            <div class="method-section" id="drilling">
-                <h3 class="section-title">潛鑽施工流程</h3>
-                <p>採非開挖潛鑽（HDD）與密閉推進技術，穿越道路與河道以降低對交通與環境的影響。</p>
+        <!-- 場鑄涵洞施工流程 -->
+        <div class="method-section" id="culvert">
+            <h3 class="section-title">場鑄涵洞施工流程</h3>
+            <p>現場施作鋼筋混凝土T型涵洞，提供主幹管線的高強度保護通道。</p>
 
-                <div class="construction-methods">
-                    <div class="photo-row">
-                        <div class="photo-column">
-                    <img src="taipower/1762746507726_0.jpg" alt="潛鑽施工流程" class="method-img">
-                        </div>
-                        <div class="photo-column">
-                            <img src="taipower\1764571412175.jpg" alt="推進工程施工流程" class="method-img">
-                        </div>
+            <div class="construction-methods">
+                <div class="photo-row">
+                    <div class="photo-column">
+                        <img src="taipower/1762748495512_0.jpg" alt="場鑄涵洞施工流程" class="method-img">
+                    </div>
+                    <div class="photo-column">
+                        <img src="taipower/1762745159668_0.jpg" alt="場鑄涵洞施工流程" class="method-img">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- 推進工程施工流程 -->
-            <div class="method-section" id="jacking">
-                <h3 class="section-title">推進工程施工流程</h3>
-                <p>採密閉管道推進技術，穿越道路或河川，減少開挖與施工對環境的影響。</p>
+        <!-- 潛鑽施工流程 -->
+        <div class="method-section" id="drilling">
+            <h3 class="section-title">潛鑽施工流程</h3>
+            <p>採非開挖潛鑽（HDD）與密閉推進技術，穿越道路與河道以降低對交通與環境的影響。</p>
 
-                <div class="construction-methods">
-                    <div class="photo-row">
-                        <div class="photo-column">
-                            <img src="taipower\1762745462741_0.jpg" alt="推進工程施工流程" class="method-img">
-                        </div>
-                        <div class="photo-column">
-                            <img src="taipower/pipe-jacking-process.jpg" alt="推進工程施工流程" class="method-img">
-                        </div>
+            <div class="construction-methods">
+                <div class="photo-row">
+                    <div class="photo-column">
+                        <img src="taipower/1762746507726_0.jpg" alt="潛鑽施工流程" class="method-img">
+                    </div>
+                    <div class="photo-column">
+                        <img src="taipower\1764571412175.jpg" alt="推進工程施工流程" class="method-img">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- 隧挖施工流程 -->
-            <div class="method-section" ig="tunnel">
-                <h3 class="section-title">隧挖施工流程</h3>
-                <p>採隧道掘進技術施工地下管線，有效減少地面干擾與交通影響。</p>
+        <!-- 推進工程施工流程 -->
+        <div class="method-section" id="jacking">
+            <h3 class="section-title">推進工程施工流程</h3>
+            <p>採密閉管道推進技術，穿越道路或河川，減少開挖與施工對環境的影響。</p>
 
-                <div class="construction-methods">
-                    <img src="taipower/1762745284305_0.jpg" alt="隧挖施工流程" class="method-img">
+            <div class="construction-methods">
+                <div class="photo-row">
+                    <div class="photo-column">
+                        <img src="taipower\1762745462741_0.jpg" alt="推進工程施工流程" class="method-img">
+                    </div>
+                    <div class="photo-column">
+                        <img src="taipower/pipe-jacking-process.jpg" alt="推進工程施工流程" class="method-img">
+                    </div>
                 </div>
             </div>
+        </div>
 
-         
+        <!-- 隧挖施工流程 -->
+        <div class="method-section" ig="tunnel">
+            <h3 class="section-title">隧挖施工流程</h3>
+            <p>採隧道掘進技術施工地下管線，有效減少地面干擾與交通影響。</p>
+
+            <div class="construction-methods">
+                <img src="taipower/1762745284305_0.jpg" alt="隧挖施工流程" class="method-img">
+            </div>
+        </div>
+         </div>
+
     </section>
 
 
@@ -166,6 +172,7 @@
                 });
         </script>
     </div>
+
 
 
 
